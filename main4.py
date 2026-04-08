@@ -21,5 +21,17 @@ def answer():
     
     return render_template('auto_answer.html', **user_data)
 
+@app.route('/distribution')
+def distribution():
+    astronauts = [
+        'Ридли Скотт',
+        'Энди Уир',
+        'Марк Уотни',
+        'Венката Капур',
+        'Тедди Сандерс',
+        'Шон Бин'
+    ]
+    return render_template('distribution.html', astronauts=astronauts)
+
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(port=5000)
